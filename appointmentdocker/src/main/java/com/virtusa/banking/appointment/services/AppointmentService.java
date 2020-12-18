@@ -26,7 +26,6 @@ import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 
 
-
 @Service
 public class AppointmentService {
     @Autowired
