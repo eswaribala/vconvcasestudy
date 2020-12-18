@@ -14,7 +14,7 @@ pipeline{
        
           bat "mvn -f ./appointmentdocker clean install -DskipTests"
           bat "docker build -f appointmentdocker/dockerfile -t appointmentdockerjenkinsapp ./appointmentdocker"
-         
+          bat "docker run -p 7090:8070 --name conv-c1 --link virtusa-mysql:mysql -d appointmentdockerjenkinsapp:latest"
        }
    
    }
