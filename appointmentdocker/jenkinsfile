@@ -13,6 +13,7 @@ pipeline{
        steps{
        
           bat "mvn -f ./appointmentdocker clean install -DskipTests"
+          bat "docker build -f appointmentdocker/dockerfile -t appointmentdockerjenkinsapp ./appointmentdocker"
          
        }
    
