@@ -1,0 +1,25 @@
+#!groovy
+pipeline{
+ agent any
+ 
+  tools {
+    maven 'maven'
+  }
+ 
+ stages{
+ 
+   stage("build"){
+   
+       steps{
+       
+          bat "mvn -f ./rmapi clean install -DskipTests"
+         
+       }
+   
+   }
+ 
+ }
+ 
+ 
+ 
+}
