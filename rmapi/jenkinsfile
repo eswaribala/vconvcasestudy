@@ -13,7 +13,7 @@ pipeline{
        steps{
        
           bat "mvn -f ./rmapi clean install -DskipTests"
-         
+          bat "docker build -f rmapi/dockerfile -t rmapiapp ./rmapi"
        }
    
    }
